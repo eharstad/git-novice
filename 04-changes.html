@@ -243,6 +243,54 @@ $ git commit -m &quot;my recent changes&quot;</code></pre></li>
 <p>Create a new Git repository on your computer called <code>bio</code>. Write a three-line biography for yourself in a file called <code>me.txt</code>, commit your changes, then modify one line, add a fourth line, and display the differences between its updated state and its original state.</p>
 </div>
 </section>
+
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2>Answers:</h2>
+</div>
+<div class="panel-body">
+<p>
+<li>Committing Changes to Git: 3</li>
+<li><code>bio</code>Repository:
+First, make sure you are not in another repository directory.  For example, <code>cd</code> into your home directory:
+<pre><code>cd ~
+</code></pre>
+Create a new directory called <code>bio</code>, and make it a Git repository:
+<pre><code>mkdir bio
+cd bio
+git init
+</code></pre>
+Create a 3 line biography in a file called <code>me.txt</code>:
+<pre><code>nano me.txt
+</code></pre>
+<pre><code># file: me.txt
+
+My name is Bob.
+I live in Denver.
+I have a dog named Ted.
+</code></pre>
+Commit your changes to the repository:
+<pre><code>git add me.txt
+git commit -m "Adding 3-line biography"
+</code></pre>
+Change the file by adding a line and editing an existing line:
+<pre><code>nano me.txt
+</code></pre>
+<pre><code>#file: me.txt
+ 
+My name is Bob. 
+I live in Denver, Colorado.
+I have a dog named Ted.
+I work as an insurance salesman.
+</code></pre>
+View the differences between the most recent revision and your new changes:
+<pre><code>git diff
+</code></pre>
+</li>
+</p>
+</div>
+</section>
+
         </div>
       </div>
       </article>
